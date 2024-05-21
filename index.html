@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    <h1>Pomodoro Timer ^.^ :3</h1>
+    <div id="form">
+        <div id="study">
+            <h2>Study Length</h2>
+            <div id="studyinp">
+                <button id="studylendec" class="pm">-</button>
+                <input type="text" name="studylen" id="studylen" value="25">
+                <button id="studyleninc" class="pm">+</button>
+            </div>      
+        </div>
+        <div id="break">
+            <h2>Break Length</h2>
+            <div id="breakinp">
+                <button id="breaklendec" class="pm">-</button>
+                <input type="text" name="breaklen" id="breaklen" value="5">
+                <button id="breakleninc" class="pm">+</button>   
+            </div>
+        </div>
+        <div id="sessions">
+            <h2>No. of Sessions</h2>
+            <button id="sessionamtdec" class="pm">-</button>
+            <input type="text" name="sessionamt" id="sessionamt" value="2">
+            <button id="sessionamtinc" class="pm">+</button>
+        </div>
+
+        <button id="start" class="btn">Start Timer</button>
+    </div>
+    <div id="timer" style="display: none;">
+        <div id="label">
+            <h2 id="worklabel">Work</h2>
+            <h2 id="breaklabel">Break</h2>
+        </div>
+        
+        <h1 id="time">00:00</h1>
+        <h2 id="remaining">Sessions Remaining: </h2>
+        <div id="btns">
+            <button id="exit" class="btn">Exit</button>
+            <button id="pausestart" class="btn">Pause</button>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
