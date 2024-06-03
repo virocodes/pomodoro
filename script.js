@@ -60,28 +60,18 @@ const changeTime = () => {
     time.innerText = `${mins}:${secs}`
 }
 
-// const startstudy = (studyl) => {
-//     type.innerText = "Work"
-//     sessions--
-//     remaining.innerText = "Remaining sessions " + sessions
-//     seconds = studyl;
-//     interval = setInterval(changeTime, 1000);
-// }
-
-// const startbreak = (breakl) => {
-
-// }
 
 const ding = new Audio('ding.mp3')
 
 const startTimer = () => {
     clearInterval(interval)
+    const started = new Date()
     if (iswork) {
         if (!paused) seconds = studyl
         worklabel.style.border = "4px solid white"
         breaklabel.style.border = "none"
         interval = setInterval(() => {
-            seconds--
+            seconds = studyl - Math.round(Math.abs(new Date() - started) / 1000);
             changeTime()
 
             if (seconds === 0) {
@@ -104,7 +94,7 @@ const startTimer = () => {
         worklabel.style.border = "none"
         breaklabel.style.border = "4px solid white"
         interval = setInterval(() => {
-            seconds--
+            seconds = breakl - Math.round(Math.abs(new Date() - started) / 1000);
             changeTime()
 
             if (seconds === 0) {
