@@ -74,7 +74,7 @@ const startTimer = () => {
             seconds = studyl - Math.round(Math.abs(new Date() - started) / 1000);
             changeTime()
 
-            if (seconds === 0) {
+            if (seconds <= 0) {
                 ding.play()
                 clearInterval(interval)
 
@@ -97,7 +97,7 @@ const startTimer = () => {
             seconds = breakl - Math.round(Math.abs(new Date() - started) / 1000);
             changeTime()
 
-            if (seconds === 0) {
+            if (seconds <= 0) {
                 ding.play()
                 clearInterval(interval)
 
